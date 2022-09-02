@@ -1,0 +1,103 @@
+﻿@model Student.Core.Models.Listing
+
+@{
+    ViewBag.Title = Model.Area + " Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Area)</h2>
+
+<div>
+    <hr />
+    <div class="col-md-2">
+        <img class="img-responsive" src="~/Content/ListingImages/@Model.Image" />
+    </div>
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Area)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Area)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NumBedrooms)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumBedrooms)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NumBathrooms)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumBathrooms)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NumGarages)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumGarages)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.University)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.University)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Fencing)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fencing)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Wifi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Wifi)
+            </dd>
+
+        </dl>
+    </div>
+
+</div>
+<hr />
+<p>
+    @Html.ActionLink("Back to Listings", "BrowseListings")
+</p>

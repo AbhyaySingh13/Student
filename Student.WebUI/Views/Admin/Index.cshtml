@@ -1,0 +1,88 @@
+﻿@{ ViewBag.Title = "Admin"; }
+
+<h2>Student Hub Admin Manager</h2>
+<br />
+
+<div class="col-md-3">
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">Accomodation Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Manage Listings", "Index", "ListingManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Add Listings", "Create", "ListingManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Appointments", "Index", "AppointmentManager", null, new { @class = "list-group-item" })
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Job Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Manage Jobs", "Index", "JobManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Add Jobs", "Create", "JobManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Sent Applications", "Index", "ApplicationManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Application Statuses", "ApplicationStatuses", "ApplicationManager", null, new { @class = "list-group-item" })
+                @*@Html.ActionLink("View CVs", "Index", "JobManager", null, new { @class = "list-group-item" })*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">Device Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Manage Devices", "Index", "DeviceManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Add Devices", "Create", "DeviceManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Current Orders", "Index", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Order History", "OrderHistory", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Drivers", "Index", "DriverManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Prepare Orders for Delivery", "PrepareOrdersForDelivery", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Prepare Orders for Collection", "PrepareOrdersForCollection", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Driver Deliveries", "DriverDeliveries", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Order Collections", "OrderCollections", "OrderManager", null, new { @class = "list-group-item" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Fault Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Fault Log ", "Index", "FaultLogManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Technicians", "Index", "TechnicianManager", null, new { @class = "list-group-item" })
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Customer Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Manage Customers", "Index", "Customer", null, new { @class = "list-group-item" })
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12 clearfix"></div>

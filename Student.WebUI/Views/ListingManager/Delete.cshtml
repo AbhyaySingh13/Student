@@ -1,0 +1,120 @@
+﻿@model Student.Core.Models.Listing
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Listing</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumBedrooms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumBedrooms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumBathrooms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumBathrooms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumGarages)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumGarages)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.University)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.University)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alarm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alarm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fencing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fencing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wifi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wifi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

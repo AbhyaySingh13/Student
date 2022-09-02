@@ -1,0 +1,38 @@
+﻿@model Student.Core.ViewModels.DeviceViewModel
+
+@{
+    ViewBag.Title = "Purchase Devices";
+}
+<h2>Purchase Devices</h2>
+
+
+<div class="col-md-10">
+
+    @foreach (var item in Model.Devices)
+    {
+
+        <div class="col-md-2" style="height: 365px; width: 250px; padding: 10px; margin: 10px; border: solid 5px whitesmoke; ">
+            <div class="col-md-12">
+                <img class="w3-circle" style="height:200px;width:200px" src="~/Content/DeviceImages/@item.Image" />
+            </div>
+            <div class="col-md-12">
+                <strong>@Html.ActionLink(item.Name, "Details", new { id = item.Id })</strong>
+            </div>
+            <div class="col-md-12">
+                <p>@item.OperatingSystem</p>
+            </div>
+            <div class="col-md-12">
+                <h4> R @item.Price</h4>
+            </div>
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-12">
+               
+                    <a href="@Url.Action("AddToBasket", "Basket", new { Id=item.Id })" class="btn btn-primary" style="padding:8px;">Add To Cart</a>
+                
+            </div>
+        </div>
+    }
+</div>
+<div class="col-md-12 clearfix" />

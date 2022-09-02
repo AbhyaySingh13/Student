@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Student.Core.Models.Application>
+
+@{
+    ViewBag.Title = "Application Statuses";
+}
+
+<h2>Applications Statuses</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Business)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.Status == "Applicant Successful")
+        {
+<tr class="success">
+    <td>
+        <img class="img-thumbnail" style="height: 50px; width:50px" src="~/Content/ApplicantImages/@item.Image" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StudentName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Business)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.JobPosition)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+</tr>
+        }
+
+        if (item.Status == "Interview Required")
+        {
+<tr class="warning">
+    <td>
+        <img class="img-thumbnail" style="height: 80px; width:100px" src="~/Content/ApplicantImages/@item.Image" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StudentName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Business)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.JobPosition)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+</tr>
+        }
+
+        if (item.Status == "Applicant Rejected")
+        {
+<tr class="danger">
+    <td>
+        <img class="img-thumbnail" style="height: 80px; width:100px" src="~/Content/ApplicantImages/@item.Image" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StudentName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Business)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.JobPosition)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+</tr>
+        }
+
+    }
+
+</table>
+

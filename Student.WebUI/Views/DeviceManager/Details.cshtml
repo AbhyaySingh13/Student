@@ -1,0 +1,95 @@
+﻿@model Student.Core.Models.Device
+
+@{
+    ViewBag.Title = Model.Name + " Details";
+}
+
+    <h2>@Html.DisplayFor(model => model.Name)</h2>
+
+    <div>
+        <hr />
+        <div class="col-md-2">
+            <img class="img-responsive" src="~/Content/DeviceImages/@Model.Image" />
+        </div>
+        <div class="col-md-10">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Memory)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Memory)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OperatingSystem)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OperatingSystem)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProcessorType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProcessorType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.HardDrive)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.HardDrive)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.GraphicsCard)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.GraphicsCard)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.VirusProtect)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.VirusProtect)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.YearsOfWarranty)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.YearsOfWarranty)
+                </dd>
+
+            </dl>
+        </div>
+        
+    </div>
+    <hr />
+        <p>
+            @Html.ActionLink("Back to Devices", "BrowseDevices")
+        </p>

@@ -1,0 +1,112 @@
+﻿@model Student.Core.Models.Device
+
+@{
+    ViewBag.Title = "Delete Devices";
+}
+
+<h2>Delete Device</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Device</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OperatingSystem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OperatingSystem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcessorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProcessorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HardDrive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HardDrive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GraphicsCard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GraphicsCard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VirusProtect)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VirusProtect)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearsOfWarranty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearsOfWarranty)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

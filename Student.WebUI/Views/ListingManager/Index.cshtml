@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Student.Core.Models.Listing>
+
+@{
+    ViewBag.Title = "Listing Manager";
+}
+
+<h2>Manage Listings</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="warning">
+        <th>
+           
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumBedrooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumBathrooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumGarages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.University)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alarm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fencing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wifi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        <img class="img-thumbnail" style="height:150px;width:1000px" src="~/Content/ListingImages/@item.Image" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Area)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Price)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumBedrooms)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumBathrooms)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NumGarages)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.University)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Alarm)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fencing)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Wifi)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </td>
+</tr>
+}
+
+</table>

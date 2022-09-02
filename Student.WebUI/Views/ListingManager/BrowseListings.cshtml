@@ -1,0 +1,38 @@
+﻿@model Student.Core.ViewModels.ListingViewModel
+
+@{
+    ViewBag.Title = "Browse Listings";
+}
+<h2>Browse Listings</h2>
+
+
+<div class="col-md-10">
+
+    @foreach (var item in Model.Listings)
+    {
+
+        <div class="col-md-2" style="height:400px;width:250px;padding:10px;margin:10px;border: solid thin whitesmoke">
+            <div class="col-md-12">
+                <img class="w3-circle" style="height:220px;width:200px" src="~/Content/ListingImages/@item.Image" />
+            </div>
+            <div class="col-md-12">
+                <strong>@Html.ActionLink(item.Area, "Details", new { id = item.Id })</strong>
+            </div>
+            <div class="col-md-12">
+                <p>@item.Address</p>
+            </div>
+            <div class="col-md-12">
+                <h4> R @item.Price</h4>
+            </div>
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-12">
+
+                <a href="#" class="btn btn-primary" style="padding:8px;">View Now</a>
+
+            </div>
+        </div>
+    }
+</div>
+<div class="col-md-12 clearfix" />

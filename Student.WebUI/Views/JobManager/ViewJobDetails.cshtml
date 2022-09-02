@@ -1,0 +1,48 @@
+﻿@model Student.Core.Models.Job
+
+<div>
+    <h4>Job Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryOffered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryOffered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Experience)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShiftTimes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShiftTimes)
+        </dd>
+
+    </dl>
+</div>

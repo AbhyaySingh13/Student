@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Student.Core.Models.Job>
+
+@{
+    ViewBag.Title = "Job Manager";
+}
+
+<h2>Manage Jobs</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalaryOffered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.University)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vaccinated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShiftTimes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        <img class="img-thumbnail" style="height:100px" src="~/Content/JobImages/@item.Image" />
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.JobPosition)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SalaryOffered)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BusinessName)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Experience)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.University)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Vaccinated)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ShiftTimes)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </td>
+</tr>
+}
+
+</table>

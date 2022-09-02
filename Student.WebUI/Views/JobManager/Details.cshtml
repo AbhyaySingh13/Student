@@ -1,0 +1,88 @@
+﻿@model Student.Core.Models.Job
+
+@{
+    ViewBag.Title = Model.BusinessName + " Details";
+}
+
+<h2>@Html.DisplayFor(model => model.JobPosition)</h2>
+
+<div>
+    <hr />
+    <div class="col-md-2">
+        <img class="img-responsive" src="~/Content/JobImages/@Model.Image" />
+    </div>
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.JobPosition)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.JobPosition)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SalaryOffered)
+            </dt>
+
+            <dd>
+               R @Html.DisplayFor(model => model.SalaryOffered)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BusinessName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BusinessName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Experience)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Experience)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.University)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.University)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShiftTimes)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShiftTimes)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Vaccinated)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Vaccinated)
+            </dd>
+
+        </dl>
+    </div>
+
+</div>
+<hr />
+<p>
+    @Html.ActionLink("Back to Jobs", "BrowseJobs")
+</p>
+

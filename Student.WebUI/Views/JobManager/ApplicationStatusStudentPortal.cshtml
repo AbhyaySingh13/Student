@@ -1,0 +1,125 @@
+﻿@model Student.Core.Models.Application
+@{
+    ViewBag.Title = "Application Status Student Portal";
+}
+@using (Html.BeginForm("ApplicationStatus", "JobManager", FormMethod.Post, new { encType = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <h3>Application Status : @Html.DisplayFor(model => model.StudentName)</h3>
+
+    <div>
+        <hr />
+        <div class="col-md-2">
+            <img class="img-responsive" src="~/Content/ApplicantImages/@Model.Image" />
+        </div>
+        <div class="col-md-10">
+            <h4>Applicant Details:</h4>
+            <br />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.StudentName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StudentName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.University)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.University)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Qualification)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Qualification)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Cell)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Cell)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.University)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.University)
+                </dd>
+
+            </dl>
+            <h4>Job Details:</h4>
+            <br />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.JobPosition)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.JobPosition)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Business)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Business)
+                </dd>
+
+            </dl>
+            <h3>Application Response:</h3>
+            <br />
+
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-body">
+                        <a href="@Url.Action("ApplicationStatus","JobManager", new { Id= @Model.Id,Status = "Applicant Successful" })" class="btn btn-success">Applicant Successful</a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="panel panel-warning">
+                    <div class="panel-body">
+                        <a href="@Url.Action("ApplicationStatus","JobManager", new { Id= @Model.Id,Status = "Interview Required" })" class="btn btn-warning">Interview Required</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="panel panel-danger">
+                    <div class="panel-body">
+                        <a href="@Url.Action("ApplicationStatus","JobManager", new { Id= @Model.Id,Status = "Applicant Rejected" })" class="btn btn-danger">Applicant Rejected</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+}
